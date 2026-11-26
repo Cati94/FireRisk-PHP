@@ -1,0 +1,23 @@
+.DS_Store
+Thumbs.db
+.env
+/vendor/
+/node_modules/
+*.log
+.idea/
+.vscode/
+
+# Runtime cache. Keep the directory structure, ignore generated cache files.
+/storage/*
+!/storage/.gitkeep
+!/storage/cache/
+!/storage/cache/.gitkeep
+!/storage/cache/slow_data_fetching/
+!/storage/cache/slow_data_fetching/.gitkeep
+/storage/cache/slow_data_fetching/*.json
+/storage/cache/slow_data_fetching/*.lock
+/storage/logs/
+/storage/cache/slow_data_fetching/raw/
+
+# Local military raster tiles are deployment data, not source code.
+/data/maps/military/

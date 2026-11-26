@@ -1,0 +1,44 @@
+{
+  "id": "postfire_hazards",
+  "name": "FireRisk Lite — Post-Fire Hazards",
+  "version": "0.6.3-firerisk-module",
+  "runtime": "php>=8.0",
+  "description": "Módulo FireRisk compatível para risco pós-incêndio de cheias rápidas/enxurradas e deslizamento/erosão, alimentado por dados ICNF locais.",
+  "constraints": {
+    "burned_area_window_months": 12,
+    "window_reference": "current system date/time at request execution unless reference_date is explicitly supplied for testing",
+    "map_layer_policy": "each burned area returned by the 12-month filter is rendered as an independent MapLibre source/layer pair",
+    "data_policy": "uses ICNF records already fetched/stored locally by slow_data_fetching; cached KML/KMZ perimeters and cached analysis responses are used when available"
+  },
+  "routes": {
+    "ui": "/api/module.php?module=postfire_hazards&page=1",
+    "health": "/api/module.php?module=postfire_hazards&action=health",
+    "burned_areas": "/api/module.php?module=postfire_hazards&action=burned_areas&months=12",
+    "risk": "/api/module.php?module=postfire_hazards&action=risk&months=12",
+    "scenario": "/api/module.php?module=postfire_hazards&action=scenario&months=12",
+    "geojson": "/api/module.php?module=postfire_hazards&action=geojson&months=12",
+    "perimeters": "/api/module.php?module=postfire_hazards&action=perimeters",
+    "prefetch_perimeters": "/api/module.php?module=postfire_hazards&action=prefetch_perimeters&limit=10"
+  },
+  "data_sources": [
+    {
+      "id": "icnf_active_occurrences_remote_cache",
+      "type": "local-cache",
+      "path": "storage/cache/slow_data_fetching",
+      "replaceable": false
+    },
+    {
+      "id": "icnf_active_occurrences_test",
+      "type": "xml-fixture",
+      "path": "data/slow_data_fetching/icnf_active_occurrences_test.xml",
+      "replaceable": true
+    },
+    {
+      "id": "icnf_gnr_kml_kmz_perimeters",
+      "type": "local-cache",
+      "path": "storage/cache/postfire_perimeters",
+      "replaceable": true
+    }
+  ],
+  "operational_use": false
+}

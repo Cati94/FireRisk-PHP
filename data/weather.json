@@ -1,0 +1,10 @@
+{
+  "station": "Portugal Operational Placeholder",
+  "observed_at": "2026-07-08T15:30:00+01:00",
+  "temperature_c": 32,
+  "relative_humidity_percent": 24,
+  "wind_speed_kmh": 28,
+  "wind_direction_deg": 70,
+  "wind_direction_label": "ENE",
+  "risk_note": "Dry air and moderate wind: watch head-fire acceleration and spotting potential."
+}

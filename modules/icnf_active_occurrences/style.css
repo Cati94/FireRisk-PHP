@@ -1,0 +1,95 @@
+.icnf-page p {
+    color: #cbd5e1;
+    line-height: 1.45;
+}
+
+.icnf-toolbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.icnf-message {
+    background: #172554;
+    border: 1px solid #1d4ed8;
+    border-radius: 8px;
+    color: #dbeafe;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.icnf-summary {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #cbd5e1;
+    display: grid;
+    gap: 4px;
+    font-size: 12px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.icnf-marker {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #dc2626;
+    border: 3px solid #fef2f2;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.35);
+    cursor: pointer;
+}
+
+.icnf-card {
+    width: 100%;
+    border: 0;
+    border-left: 5px solid #dc2626;
+    border-radius: 8px;
+    background: #1f2937;
+    color: #f8fafc;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px;
+    text-align: left;
+}
+
+.icnf-card:hover {
+    background: #374151;
+}
+
+.icnf-card .meta {
+    color: #cbd5e1;
+    display: block;
+    font-size: 12px;
+    line-height: 1.35;
+    margin-top: 6px;
+}
+
+.icnf-details {
+    margin-top: 12px;
+}
+
+.icnf-details pre {
+    background: #020617;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    color: #cbd5e1;
+    max-height: 260px;
+    overflow: auto;
+    padding: 10px;
+    white-space: pre-wrap;
+}
+
+.icnf-date-rule {
+    background: #111827;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    color: #e5e7eb;
+    font-size: 13px;
+    margin: 10px 0;
+    padding: 8px 10px;
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "icnf_active_occurrences_remote",
+    "name": "ICNF Ocorrências Activas XML",
+    "enabled": true,
+    "type": "http_xml",
+    "parser": "icnf_active_occurrences",
+    "url": "https://fogos.icnf.pt/localizador/webserviceocorrencias.asp",
+    "ttl_seconds": 300,
+    "timeout_seconds": 300,
+    "relevance": 120,
+    "notes": "Real ICNF XML endpoint for active fire occurrences. Uses 5-minute timeout, chunked local buffering, resumable partial download, XMLReader streaming parse and stale-cache fallback.",
+    "streaming": true,
+    "download_buffer": true,
+    "resume": true,
+    "accept_encoding": "identity",
+    "chunk_size_bytes": 262144
+  },
+  {
+    "id": "icnf_active_occurrences_demo",
+    "name": "ICNF Reduced Demo XML",
+    "enabled": true,
+    "type": "local_xml",
+    "parser": "icnf_active_occurrences",
+    "url": "data/slow_data_fetching/icnf_active_occurrences_demo.xml",
+    "ttl_seconds": 3600,
+    "timeout_seconds": 2,
+    "relevance": 95,
+    "notes": "Small reduced XML fallback kept for quick manual checks. The standard parser test fixture is icnf_active_occurrences_test.",
+    "streaming": true,
+    "resume": false,
+    "accept_encoding": "identity",
+    "chunk_size_bytes": 262144
+  },
+  {
+    "id": "icnf_active_occurrences_test",
+    "name": "ICNF Standard Test XML",
+    "enabled": true,
+    "type": "local_xml",
+    "parser": "icnf_active_occurrences",
+    "url": "data/slow_data_fetching/icnf_active_occurrences_test.xml",
+    "ttl_seconds": 86400,
+    "timeout_seconds": 10,
+    "relevance": 115,
+    "notes": "Canonical ICNF XML test fixture provided by the user. This is the standard parser validation file and mirrors the real INCENDIOSRURAIS/CODIGO structure.",
+    "streaming": true,
+    "resume": false,
+    "accept_encoding": "identity",
+    "chunk_size_bytes": 262144
+  },
+  {
+    "id": "icnf_demo_occurrences",
+    "name": "ICNF Demo Occurrences",
+    "enabled": true,
+    "type": "local_json",
+    "url": "data/slow_data_fetching/icnf_demo_occurrences.json",
+    "ttl_seconds": 300,
+    "timeout_seconds": 2,
+    "relevance": 100,
+    "notes": "Offline demo source that mimics the shape of an external fire-occurrence feed."
+  },
+  {
+    "id": "weather_demo_feed",
+    "name": "Weather Demo Feed",
+    "enabled": true,
+    "type": "local_json",
+    "url": "data/slow_data_fetching/weather_demo_feed.json",
+    "ttl_seconds": 600,
+    "timeout_seconds": 2,
+    "relevance": 90,
+    "notes": "Offline demo source for weather-style operational data."
+  }
+]

@@ -1,0 +1,8 @@
+services:
+  firerisk:
+    build: .
+    container_name: firerisk-php-v02
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app

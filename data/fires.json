@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Ocorrência Teste - Serra",
+    "latitude": 40.123,
+    "longitude": -8.245,
+    "status": "active",
+    "severity": "high",
+    "started_at": "2026-07-08T14:30:00+01:00",
+    "notes": "Test occurrence for initial attack and spread evaluation."
+  },
+  {
+    "id": 2,
+    "name": "Ocorrência Teste - Vale",
+    "latitude": 39.743,
+    "longitude": -7.923,
+    "status": "monitoring",
+    "severity": "medium",
+    "started_at": "2026-07-08T15:10:00+01:00",
+    "notes": "Monitoring occurrence with moderate operational priority."
+  },
+  {
+    "id": 3,
+    "name": "Ocorrência Teste - Litoral",
+    "latitude": 38.722,
+    "longitude": -9.139,
+    "status": "resolved",
+    "severity": "low",
+    "started_at": "2026-07-08T11:45:00+01:00",
+    "notes": "Low severity resolved occurrence used for UI validation."
+  }
+]

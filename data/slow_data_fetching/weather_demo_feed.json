@@ -1,0 +1,13 @@
+{
+  "source": "weather_demo_feed",
+  "generated_at": "2026-07-08T15:05:00+01:00",
+  "station": "Demo ridge station",
+  "latitude": 40.03,
+  "longitude": -8.12,
+  "temperature_c": 32.4,
+  "relative_humidity_percent": 21,
+  "wind_speed_kmh": 28,
+  "wind_gust_kmh": 43,
+  "wind_direction_degrees": 62,
+  "operational_note": "Dry and windy demo conditions. Useful for testing decision-support ingestion later."
+}

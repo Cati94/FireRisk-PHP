@@ -1,0 +1,81 @@
+.fire-marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25), 0 5px 18px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+}
+
+.fire-marker.high {
+    background: #ef4444;
+}
+
+.fire-marker.medium {
+    background: #f59e0b;
+}
+
+.fire-marker.low {
+    background: #22c55e;
+}
+
+.fire-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.fire-message,
+.fire-date-rule {
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.fire-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.fire-summary > div {
+    background: #111827;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fire-card {
+    display: block;
+    width: 100%;
+    border: 0;
+    color: #f9fafb;
+    background: #1f2937;
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.12s ease, background 0.12s ease;
+}
+
+.fire-card:hover {
+    transform: translateY(-1px);
+    background: #263244;
+}
+
+.fire-card.high {
+    border-left: 5px solid #ef4444;
+}
+
+.fire-card.medium {
+    border-left: 5px solid #f59e0b;
+}
+
+.fire-card.low {
+    border-left: 5px solid #22c55e;
+}

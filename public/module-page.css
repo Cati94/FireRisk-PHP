@@ -1,0 +1,141 @@
+.module-workspace-body {
+    overflow: hidden;
+}
+
+.module-workspace-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 88px;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 20px;
+    background: #111827;
+    color: #f9fafb;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+}
+
+.module-workspace-header h1 {
+    margin: 4px 0 2px;
+    font-size: 24px;
+}
+
+.module-workspace-header p {
+    margin: 0;
+    color: #9ca3af;
+    font-size: 13px;
+    max-width: 980px;
+}
+
+.module-back-link {
+    color: #93c5fd;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.module-workspace-layout {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: minmax(460px, 42vw) 1fr;
+    min-height: 0;
+}
+
+.module-workspace-panel {
+    overflow-y: auto;
+    padding: 18px;
+    background: #0f172a;
+    color: #f9fafb;
+    border-right: 1px solid #253044;
+}
+
+.module-workspace-map {
+    position: relative !important;
+    inset: auto !important;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    isolation: isolate;
+    background: #dbe4e8;
+}
+
+.map-runtime-notice {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 5;
+    max-width: min(420px, calc(100% - 72px));
+    border: 1px solid #b45309;
+    border-radius: 6px;
+    padding: 9px 12px;
+    background: rgba(255, 251, 235, 0.97);
+    color: #78350f;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+.map-runtime-notice-error {
+    border-color: #b91c1c;
+    background: rgba(254, 242, 242, 0.97);
+    color: #7f1d1d;
+}
+
+.module-workspace-body #status-bar {
+    left: calc(42vw + 24px);
+    bottom: 18px;
+}
+
+.module-button.heavy-module {
+    border-color: #f59e0b;
+}
+
+.module-button.heavy-module .module-type {
+    background: #451a03;
+    color: #fed7aa;
+}
+
+@media (max-width: 1100px) {
+    .module-workspace-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: 52% 48%;
+    }
+    .module-workspace-panel {
+        border-right: 0;
+        border-bottom: 1px solid #253044;
+    }
+    .module-workspace-body #status-bar {
+        left: 18px;
+    }
+}
+
+.module-workspace-body.module-workspace-no-map {
+    overflow: auto;
+}
+
+.module-workspace-no-map .module-workspace-layout {
+    display: block;
+    overflow-y: auto;
+}
+
+.module-workspace-no-map .module-workspace-panel {
+    max-width: 1160px;
+    min-height: calc(100vh - 88px);
+    margin: 0 auto;
+    border-right: 0;
+}
+
+.module-workspace-no-map #status-bar {
+    left: 24px;
+}

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
+    <module id="fire_occurrences">
+        <name>Fire Occurrences</name>
+        <enabled>true</enabled>
+        <type>hybrid</type>
+        <load_mode>page</load_mode>
+        <relevance>100</relevance>
+        <entry>modules/fire_occurrences/Module.php</entry>
+        <class>FireOccurrencesModule</class>
+        <description>Presentation module for current-day fires backed by the central ICNF Ocorrências Activas dataset.</description>
+    </module>
+
+    <module id="icnf_active_occurrences">
+        <name>ICNF Ocorrências Activas</name>
+        <enabled>true</enabled>
+        <type>hybrid</type>
+        <load_mode>page</load_mode>
+        <relevance>98</relevance>
+        <entry>modules/icnf_active_occurrences/Module.php</entry>
+        <class>IcnfActiveOccurrencesModule</class>
+        <description>Central normalized data provider for ICNF active occurrences with cache, test fixture and fallback support.</description>
+    </module>
+
+
+    <module id="weather">
+        <name>Weather</name>
+        <enabled>true</enabled>
+        <type>hybrid</type>
+        <load_mode>page</load_mode>
+        <relevance>90</relevance>
+        <entry>modules/weather/Module.php</entry>
+        <class>WeatherModule</class>
+        <description>Derives operational weather context from ICNF occurrence weather fields when available.</description>
+    </module>
+
+    <module id="slow_data_fetching">
+        <name>Slow Data Fetching</name>
+        <enabled>true</enabled>
+        <type>page</type>
+        <load_mode>page</load_mode>
+        <relevance>85</relevance>
+        <entry>modules/slow_data_fetching/Module.php</entry>
+        <class>SlowDataFetchingModule</class>
+        <description>Timeout-safe, cached external data fetcher with stale fallback for slow or unreliable sources.</description>
+    </module>
+
+    <module id="decision_support">
+        <name>Decision Support</name>
+        <enabled>true</enabled>
+        <type>page</type>
+        <load_mode>page</load_mode>
+        <relevance>97</relevance>
+        <entry>modules/decision_support/Module.php</entry>
+        <class>DecisionSupportModule</class>
+        <description>Operational support panel using the central ICNF active occurrences dataset.</description>
+    </module>
+
+    <module id="propagation">
+        <name>Fire Propagation</name>
+        <enabled>true</enabled>
+        <type>hybrid</type>
+        <load_mode>page</load_mode>
+        <relevance>96</relevance>
+        <entry>modules/propagation/Module.php</entry>
+        <class>PropagationModule</class>
+        <description>Deterministic tactical propagation preview using the central ICNF active occurrences dataset.</description>
+    </module>
+
+
+    <module id="postfire_hazards">
+        <name>Post-Fire Hazards</name>
+        <enabled>true</enabled>
+        <type>heavy_page</type>
+        <load_mode>heavy_page</load_mode>
+        <relevance>88</relevance>
+        <entry>modules/postfire_hazards/Module.php</entry>
+        <class>PostfireHazardsModule</class>
+        <description>Heavy post-fire flood/runoff and erosion risk workspace using locally stored ICNF data, scenario simulation, independent burned-area layers and cached KML/KMZ perimeter support. Opens as an isolated heavy page and is never loaded by the home screen.</description>
+    </module>
+
+    <module id="nasa_firms">
+        <name>NASA FIRMS Hotspots</name>
+        <enabled>false</enabled>
+        <type>layer</type>
+        <relevance>70</relevance>
+        <entry>modules/nasa_firms/Module.php</entry>
+        <class>NasaFirmsModule</class>
+        <description>Satellite thermal anomaly layer placeholder.</description>
+    </module>
+
+    <module id="iot_stations">
+        <name>IoT Stations</name>
+        <enabled>false</enabled>
+        <type>hybrid</type>
+        <relevance>60</relevance>
+        <entry>modules/iot_stations/Module.php</entry>
+        <class>IotStationsModule</class>
+        <description>Remote field stations and sensor telemetry placeholder.</description>
+    </module>
+
+    <module id="recovery">
+        <name>Post-Fire Recovery</name>
+        <enabled>false</enabled>
+        <type>page</type>
+        <relevance>40</relevance>
+        <entry>modules/recovery/Module.php</entry>
+        <class>RecoveryModule</class>
+        <description>Post-fire recovery and prevention workflow placeholder.</description>
+    </module>
+</modules>

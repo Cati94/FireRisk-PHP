@@ -1,0 +1,290 @@
+.postfire-page {
+    display: grid;
+    gap: 14px;
+}
+
+.postfire-hero-card,
+.postfire-layer-box,
+.postfire-table-card,
+.postfire-details,
+.postfire-scenario-form {
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.72);
+    padding: 14px;
+}
+
+.postfire-hero-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: start;
+}
+
+.postfire-hero-card h2,
+.postfire-hero-card p,
+.postfire-scenario-form h3 {
+    margin: 0;
+}
+
+.postfire-hero-card p {
+    margin-top: 6px;
+    color: #9ca3af;
+    line-height: 1.45;
+}
+
+.postfire-badges,
+.postfire-preset-row,
+.postfire-toolbar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.postfire-badges span,
+.postfire-chip {
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 999px;
+    padding: 5px 8px;
+    background: rgba(255,255,255,0.06);
+    color: #d1d5db;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.postfire-mini-grid,
+.postfire-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.postfire-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.postfire-mini-grid article,
+.postfire-metrics article,
+.postfire-area-card,
+.postfire-stat {
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 14px;
+    background: rgba(31, 41, 55, 0.72);
+    padding: 12px;
+}
+
+.postfire-mini-grid span,
+.postfire-metrics span,
+.postfire-area-card p,
+.postfire-area-card .postfire-card-meta,
+.postfire-zones-table span {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.postfire-mini-grid strong,
+.postfire-metrics strong {
+    display: block;
+    margin-top: 3px;
+    font-size: 20px;
+}
+
+.postfire-metrics em {
+    display: inline-block;
+    margin-top: 5px;
+    font-style: normal;
+    color: #d1d5db;
+}
+
+.postfire-metrics article[data-level="critical"],
+.postfire-area-card[data-level="critical"] { border-left: 5px solid #dc2626; }
+.postfire-metrics article[data-level="high"],
+.postfire-area-card[data-level="high"] { border-left: 5px solid #ef4444; }
+.postfire-metrics article[data-level="medium"],
+.postfire-area-card[data-level="medium"] { border-left: 5px solid #f59e0b; }
+.postfire-metrics article[data-level="low"],
+.postfire-area-card[data-level="low"] { border-left: 5px solid #22c55e; }
+.postfire-metrics article[data-level="residual"],
+.postfire-area-card[data-level="residual"] { border-left: 5px solid #6b7280; }
+
+.postfire-scenario-form {
+    display: grid;
+    gap: 9px;
+}
+
+.postfire-scenario-form label {
+    color: #d1d5db;
+    font-size: 13px;
+}
+
+.postfire-input-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 86px;
+    gap: 8px;
+    align-items: center;
+}
+
+.postfire-input-row input[type="number"] {
+    width: 100%;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 10px;
+    padding: 7px 8px;
+    background: rgba(3, 7, 18, 0.82);
+    color: white;
+}
+
+.postfire-input-row input[type="range"] {
+    width: 100%;
+}
+
+.postfire-preset,
+.postfire-page .small-button {
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.postfire-page .small-button.primary,
+.postfire-page button[type="submit"] {
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    border-color: transparent;
+}
+
+.secondary-row {
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.42);
+    padding: 12px;
+}
+
+.postfire-message {
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 12px;
+    padding: 10px 12px;
+    background: rgba(2, 6, 23, 0.72);
+    color: #d1d5db;
+}
+
+.postfire-message.loading {
+    border-color: rgba(96, 165, 250, 0.6);
+}
+
+.postfire-message.error {
+    border-color: #ef4444;
+    color: #fecaca;
+}
+
+.postfire-layer-toggles {
+    display: grid;
+    gap: 5px;
+    max-height: 180px;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.postfire-layer-toggle {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #d1d5db;
+    font-size: 13px;
+}
+
+.postfire-area-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.postfire-area-card h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.postfire-area-card p {
+    margin: 0 0 8px;
+}
+
+.postfire-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.postfire-card-meta span {
+    border: 1px solid rgba(148, 163, 184, 0.20);
+    border-radius: 999px;
+    padding: 3px 7px;
+}
+
+.postfire-area-card button {
+    margin-top: 9px;
+}
+
+.postfire-table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.postfire-table-head h3 {
+    margin: 0;
+}
+
+.postfire-table-wrap {
+    overflow-x: auto;
+}
+
+.postfire-zones-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 820px;
+}
+
+.postfire-zones-table th,
+.postfire-zones-table td {
+    border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    padding: 9px 7px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.postfire-zones-table th {
+    color: #9ca3af;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.postfire-chip[data-level="critical"] { color: #fecaca; border-color: #dc2626; }
+.postfire-chip[data-level="high"] { color: #fed7aa; border-color: #ef4444; }
+.postfire-chip[data-level="medium"] { color: #fde68a; border-color: #f59e0b; }
+.postfire-chip[data-level="low"] { color: #bbf7d0; border-color: #22c55e; }
+.postfire-chip[data-level="residual"] { color: #d1d5db; border-color: #6b7280; }
+
+.postfire-details pre {
+    max-height: 240px;
+    overflow: auto;
+    white-space: pre-wrap;
+    color: #9ca3af;
+    background: rgba(3, 7, 18, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+@media (max-width: 900px) {
+    .postfire-hero-card,
+    .postfire-mini-grid,
+    .postfire-metrics,
+    .postfire-area-cards {
+        grid-template-columns: 1fr;
+    }
+}

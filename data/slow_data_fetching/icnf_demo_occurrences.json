@@ -1,0 +1,26 @@
+{
+  "source": "icnf_demo_occurrences",
+  "generated_at": "2026-07-08T15:00:00+01:00",
+  "records": [
+    {
+      "id": "demo-001",
+      "name": "Demo occurrence - Serra Norte",
+      "district": "Coimbra",
+      "municipality": "Lousã",
+      "latitude": 40.115,
+      "longitude": -8.236,
+      "status": "active",
+      "severity": "high"
+    },
+    {
+      "id": "demo-002",
+      "name": "Demo occurrence - Vale Sul",
+      "district": "Castelo Branco",
+      "municipality": "Proença-a-Nova",
+      "latitude": 39.748,
+      "longitude": -7.921,
+      "status": "monitoring",
+      "severity": "medium"
+    }
+  ]
+}

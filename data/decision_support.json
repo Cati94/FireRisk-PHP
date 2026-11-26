@@ -1,0 +1,20 @@
+[
+  {
+    "priority": 1,
+    "title": "Protect initial attack window",
+    "level": "high",
+    "text": "Prioritize rapid containment while the perimeter is still small. Confirm access, water supply and escape routes before committing crews."
+  },
+  {
+    "priority": 2,
+    "title": "Use wind as primary spread cue",
+    "level": "high",
+    "text": "Check flank exposure and expected head-fire direction. If wind increases, reinforce anchor points and avoid unsupported direct attack."
+  },
+  {
+    "priority": 3,
+    "title": "Keep information loop active",
+    "level": "medium",
+    "text": "Update occurrence status, observed behaviour and resource deployment so future modules can learn from operational decisions."
+  }
+]
